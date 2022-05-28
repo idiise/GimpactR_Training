@@ -1,0 +1,77 @@
+---
+title: "Syntax basic R"
+author: "Idrissa Dabo"
+date: '2022-05-28'
+output: html_document
+---
+
+## Important Keboard shorcut
+to see all shortcut you can click to tools, keyboard shortcut help or directly click in console or in the script click **Alt + shift + k**.
+  
+Some useful shortcut that i usually use to organize my syntax:
+  
+  * To comment or uncomment **ctrl + shift +c**
+  
+  * To Run selected lines  **ctrl+ enter**
+  
+  * To create a section **ctrl+shift+R**
+  
+  * To Run a section **ctrl+alt+T**
+  
+  * Delete line **ctrl+D**
+
+In R we have 4 basics functions important to create function Collect **c()**, repeat **rep()**, sequence1 **:**, sequence2 **seq()**
+to create objects click to **Alt+6** or **Alt+ -**. For example in the code below we gonna create tree variables or Objects a, b and d
+```{r}
+a <- 6
+b <- 10
+d <- a+b
+```
+For numerical object you can directly click the value like in the code above but for String or character you need to put the element between **quote " "**.
+Example below:
+```{r}
+names <- "Prince"
+Country <-  "Ghana"
+```
+## Vectors
+1. Collect and repeat
+In R vectors can be consider as column in excel. For example if i want to create a column names like in excel with elements *Idrissa, Prince and Jacob* i can use the function collect *c()*
+```{r}
+names <- c("Idrissa", "prince", "Jacob")
+age <- c(30,29,25)
+Country <- c("Senegal", "Ghana", "Mali")
+```
+Each element of the code above can be consider as a column.
+On the other hand how can i do if i want to **repeat** the names of **Prince 100 times** do i need to repeat prince 100 times in the collect c() function. Yes i can but it will take a lot of times so i can use the function **rep()** to do it quickly
+```{r}
+rep("Prince", 100)
+rep(c("Idrissa","prince","Jacob"),c(3,2,4))
+```
+for more examples of rep you can click help(rep)
+2. Sequences
+If you have a dataset with 5000 lines and you want to create an ID of each row you can use the functions in the example below
+```{r results= "hide"}
+1:5000
+seq(from = 1, to = 100, by = 5)
+seq(from = -50, to = -20, by=5)
+```
+Please click help(seq) to see other examples with seq
+
+## Exercices
+* *Exercices 1*
+
+Use the Picture below to:
+1. Create 4 objects : Person, Sex, Weight, Height
+2. calculate the mean for the variables if it is possible
+3. calculate the Body Mass Index (BMI) :BMI = weight/(Height/100)^2
+4. create a dataset where you will have Person, Weight, Height, Sex and BMI
+![](C:\\Users\\USER MSI\\Documents\\R Project\\GimpactR_Training\\Data.PNG)
+
+* *Exercice 2*
+Create the following vectors
+
+vec1 = 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5
+
+vec2 = 1 1 1 2 2 2 3 3 3 4 4 4 5 5 5
+
+vec3 = 1 1 2 2 2 3 3 3 3 4 4 4 4 4
